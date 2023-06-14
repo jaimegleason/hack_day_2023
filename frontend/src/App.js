@@ -1,9 +1,10 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios'
 
 function App() {
+  // eslint-disable-next-line
   const [getMessage, setGetMessage] = useState({})
 
   useEffect(()=>{
@@ -20,13 +21,15 @@ function App() {
       <header className="App-header">
         <h1>LinkUp</h1>
         <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card-body">
           <figure><img src="https://img.freepik.com/free-photo/smiley-businesswoman-posing-outdoors-with-arms-crossed-copy-space_23-2148767055.jpg" alt="Shoes" /></figure>
-          <div className="card-body">
-            <h2 className="card-title">Shoes!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div className="card-actions justify-end">
-                <button className="btn btn-primary">Buy Now</button>
-              </div>
+            <h2 className="card-title">Evelyn Herrera</h2>
+            <div className="card-body-2">
+              <p><b>Joined State Farm:</b> September 2019</p>
+              <p><b>Title:</b>Technology Analyst</p>
+              <p><b>Meeting Time:</b> 2pm CST</p>
+              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><u><b>Meeting Link</b></u></a>
+            </div>
   </div>
 </div>
       </header>

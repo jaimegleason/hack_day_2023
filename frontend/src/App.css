@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+.card {
+  width: 35%;
+}
+
+.card-title {
+  font-size: 30px;
+  font-family: Helvetica;
+  color: #000000;
+  text-align: right;
+}
+
+.card-body-2 {
+  font-size: 20px;
+  font-family: Helvetica;
+  color: #000000;
+  text-align: left;
+}
+
 .App {
   text-align: center;
 }
