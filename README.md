@@ -32,3 +32,12 @@ git pull
 git commit -m "comment here"
 
 git push
+
+**Might need to install these**
+
+npm install react-scripts
+
+npm install react react-dom
+
+npm install web-vitals
+
