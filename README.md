@@ -41,3 +41,6 @@ npm install react react-dom
 
 npm install web-vitals
 
+**Other installations:**
+
+npm install axios
