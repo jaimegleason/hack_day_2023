@@ -1,3 +1,4 @@
+import pip._vendor.requests 
 import uuid
 import requests
 from flask import Flask, render_template, session, request, redirect, url_for
