@@ -13,6 +13,10 @@ pip install Flask
 
 **Run React app:**
 
+cd into project\frontend
+
+run:
+
 npm run
 
 
