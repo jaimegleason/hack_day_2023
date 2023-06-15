@@ -8,7 +8,7 @@ import TeamsButton from './TeamsButton';
 function App() {
   const [meetingTime, setMeetingTime] = useState('');
 
-  const meetingTimes = ["10am CST", "11am CST", "1pm CST", "2pm CST", "3pm CST", "4pm CST"];
+  const meetingTimes = ["10:00am CST", "11:00am CST", "1:00pm CST", "2:00pm CST", "3:00pm CST", "4:00pm CST"];
   const randomMeetingTime = meetingTimes[Math.floor(Math.random() * meetingTimes.length)];
 
   useEffect(() => {
@@ -44,13 +44,15 @@ function App() {
             <div className="card-body-2">
               <p><b>Joined State Farm:</b> September 2019</p>
               <p><b>Title:</b> Technology Analyst</p>
+              <p><b>Location:</b> Champaign, IL (RDC)</p>
               <p><b>Meeting Time:</b> {meetingTime}</p>
-              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><u><b>Meeting Link</b></u></a>
+              <a href="https://teams.microsoft.com/_#/modern-calling/"><u><b>Meeting Link</b></u></a>
             </div>
+              <div class = 'TB'><TeamsButton /></div>
+
           </div>
         </div>
         <QuestionComponent />
-        <TeamsButton />
       </header>
     </div>
   );

@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.TB {
+  text-align: center;
+}
+
 .card {
   width: 35%;
   background-color: white;
