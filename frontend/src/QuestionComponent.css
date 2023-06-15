@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.qc {
+    background-color: white;
+    color: black;
+    font-family: Helvetica;
+}
+
+.btn {
+    background-color: #c60000;
+    color: white;
+    font-family: Helvetica;
+}

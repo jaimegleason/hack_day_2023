@@ -2,8 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
 .TB {
   text-align: center;
+=======
+.qc-wrapper {
+    background-color: #c60000;
+>>>>>>> 42e2ae754cbefed6e2ec379c3b1d93288514d407
 }
 
 .card {
