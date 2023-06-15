@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.qc-wrapper {
+    background-color: #c60000;
+}
+
 .card {
   width: 35%;
   background-color: white;
