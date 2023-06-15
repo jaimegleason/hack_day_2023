@@ -4,11 +4,13 @@ import OneSignal from 'react-onesignal';
 import QuestionComponent from './QuestionComponent';
 import './App.css';
 import TeamsButton from './TeamsButton';
+import LinkedInButton from './LinkedInButton';
+import GithubButton from './GithubButton';
 
 function App() {
   const [meetingTime, setMeetingTime] = useState('');
 
-  const meetingTimes = ["10:00am CST", "11:00am CST", "1:00pm CST", "2:00pm CST", "3:00pm CST", "4:00pm CST"];
+  const meetingTimes = ["10:00 AM CST", "11:00 AM CST", "1:00 PM CST", "2:00 PM CST", "3:00 PM CST", "4:00 PM CST"];
   const randomMeetingTime = meetingTimes[Math.floor(Math.random() * meetingTimes.length)];
 
   useEffect(() => {
@@ -48,11 +50,11 @@ function App() {
               <p><b>Meeting Time:</b> {meetingTime}</p>
               <a href="https://teams.microsoft.com/_#/modern-calling/"><u><b>Meeting Link</b></u></a>
             </div>
-              <div class = 'TB'><TeamsButton /></div>
+              <div class = 'TB'><LinkedInButton /><TeamsButton /><GithubButton /></div>
 
           </div>
         </div>
-        <QuestionComponent />
+        <div class = 'qc'><QuestionComponent /></div>
       </header>
     </div>
   );

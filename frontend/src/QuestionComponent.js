@@ -8,8 +8,7 @@ const QuestionComponent = () => {
     'What is your favorite hobby?',
     'What has been you favorite vacation?',
     'Do you listen to any podcasts?',
-    'What are your career goals',
-    ''
+    'What are your career goals?',
   ];
 
   const [currentQuestion, setCurrentQuestion] = useState('');
@@ -22,9 +21,9 @@ const QuestionComponent = () => {
 
   return (
     <div>
-      <h3>Random Question:</h3>
+      <h3>Conversation Starter:</h3>
       <p>{currentQuestion}</p>
-      <button onClick={getRandomQuestion}>Get Random Question</button>
+      <button onClick={getRandomQuestion}>Get a New Conversation Starter!</button>
     </div>
   );
 };
