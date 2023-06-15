@@ -1,4 +1,5 @@
 // import logo from './logo.svg';
+import OneSignal from 'react-onesignal';
 import './App.css';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios'
@@ -16,6 +17,13 @@ function App() {
     })
 
   }, [])
+
+  useEffect(() => {
+    OneSignal.init({
+      appId: "2451aa42-ebe6-4e40-bd1e-e85e0e25f02d"
+    });
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
