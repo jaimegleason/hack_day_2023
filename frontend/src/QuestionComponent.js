@@ -2,10 +2,14 @@ import React, { useState } from 'react';
 
 const QuestionComponent = () => {
   const questionPrompts = [
-    'What is your favorite color?',
+    'What is your favorite form of social media?',
     'What is your favorite food?',
     'What is your favorite movie?',
     'What is your favorite hobby?',
+    'What has been you favorite vacation?',
+    'Do you listen to any podcasts?',
+    'What are your career goals',
+    ''
   ];
 
   const [currentQuestion, setCurrentQuestion] = useState('');

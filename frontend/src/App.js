@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import OneSignal from 'react-onesignal';
-import QuestionComponent from './QuestionComponent'; // Import the QuestionComponent
+import QuestionComponent from './QuestionComponent';
 import './App.css';
+import TeamsButton from './TeamsButton';
 
 function App() {
-  const [getMessage, setGetMessage] = useState({});
+  const [meetingTime, setMeetingTime] = useState('');
 
-  const meeting_times = ["10am CST", "11am CST", "1pm CST", "2pm CST", "3pm CST", "4pm CST"];
-  const meeting_time = meeting_times[Math.floor(Math.random() * meeting_times.length)];
+  const meetingTimes = ["10am CST", "11am CST", "1pm CST", "2pm CST", "3pm CST", "4pm CST"];
+  const randomMeetingTime = meetingTimes[Math.floor(Math.random() * meetingTimes.length)];
 
   useEffect(() => {
     axios.get('http://localhost:5000/flask/hello')
       .then(response => {
         console.log("SUCCESS", response);
-        setGetMessage(response);
       })
       .catch(error => {
         console.log(error);
@@ -26,6 +26,10 @@ function App() {
       appId: "2451aa42-ebe6-4e40-bd1e-e85e0e25f02d"
     });
   }, []);
+
+  useEffect(() => {
+    setMeetingTime(randomMeetingTime);
+  }, [randomMeetingTime]);
 
   return (
     <div className="App">
@@ -40,12 +44,13 @@ function App() {
             <div className="card-body-2">
               <p><b>Joined State Farm:</b> September 2019</p>
               <p><b>Title:</b> Technology Analyst</p>
-              <p><b>Meeting Time:</b> {meeting_time}</p>
+              <p><b>Meeting Time:</b> {meetingTime}</p>
               <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><u><b>Meeting Link</b></u></a>
             </div>
           </div>
         </div>
-        <QuestionComponent /> {/* Add the QuestionComponent here */}
+        <QuestionComponent />
+        <TeamsButton />
       </header>
     </div>
   );
